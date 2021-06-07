@@ -1,0 +1,5 @@
+<button id="btn" (click)="getData()"> Get a random movie </button>
+
+<div *ngIf="movie">
+<app-movie [movie]="movie"></app-movie>
+</div>

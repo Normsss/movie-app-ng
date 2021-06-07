@@ -1,0 +1,36 @@
+
+
+.noMovie {
+  width: 185px;
+  height: auto;
+}  
+
+.sinopsis {
+text-align: left;
+}
+
+#printed-movie {
+  width: 450px;
+  margin: auto;
+  display: block;
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 7.5px );
+  -webkit-backdrop-filter: blur( 7.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+#printed-movie > h2 {
+  font-size: 150%;
+  margin: 15px;
+}
+
+#printed-movie > .year {
+  font-size: 1em;
+}
+
+
+.sinopsis{
+  text-align: center;
+}

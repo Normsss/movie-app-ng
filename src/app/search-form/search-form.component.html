@@ -1,0 +1,34 @@
+
+<p> Or search for a Movie</p>
+<form action="">
+  <input
+    type="text"
+    id="search"
+    placeholder="i.e. miserables"
+    [(ngModel)]="keyWord"
+    #ctrl="ngModel"
+    name="keyWord"
+  />
+  <button id="btn" (click)="searchMovies()">Search</button>
+</form>
+
+<div *ngIf="this.selectedMovies.length > 0">
+  <button id="btn" (click)="showSelectedMovies()">Mostrar selección</button>
+  <div *ngIf="this.isMovieShown">
+    <div *ngFor="let movie of selectedMovies; let j = index">
+      <app-movie [movie]="movie"></app-movie>
+    </div>
+  </div>
+</div>
+
+<div *ngFor="let movie of movies; let i = index">
+  <div
+    (click)="selectedMovie(movie)"
+    class="result"
+    [ngClass]="{ selected: movie.isSelected }"
+  >
+    <app-movie [movie]="movie"></app-movie>
+  </div>
+</div>
+
+

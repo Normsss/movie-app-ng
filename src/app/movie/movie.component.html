@@ -1,0 +1,25 @@
+<div id="printed-movie">
+    <h2>{{movie.title}}</h2>
+  
+      <div>
+        <img *ngIf="movie.image; else noMovieImage" [src]="imageUrl + movie.image"/>
+        <ng-template #noMovieImage>
+          <img class="noMovie" [src]="noMoviePoster"/>
+        </ng-template>
+      </div>
+  
+      <div class="year">
+        <p *ngIf="movie.date; else noDate"> ({{movie.date}})</p>
+        <ng-template #noDate>
+          (¡Oops! No hay fecha de estreno.)
+        </ng-template>
+      </div>
+  
+  
+      <div class="sinopsis">
+        <p *ngIf="movie.sinopsis; else elseBlock"> {{movie.sinopsis}}</p>
+        <ng-template #elseBlock>
+          ¡Vaya, vaya! No hay sinopsis.
+        </ng-template>
+
+</div>
